@@ -1,0 +1,21 @@
+task wrapper(type: Wrapper) {
+  gradleVersion = '4.3.1'
+}
+
+repositories {
+  mavenCentral()
+  mavenLocal()
+}
+
+apply plugin: 'java'
+apply plugin: 'jacoco'
+
+dependencies {
+  compile "org.projectlombok:lombok:1.16.18"
+  testCompile 'junit:junit:4.8.1'
+}
+
+jacoco {
+  toolVersion = '0.7.10-SNAPSHOT'
+}
+
